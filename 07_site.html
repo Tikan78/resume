@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <style> 
+
+       
+        .header{
+
+            background-color: #ebb8b8;
+            color: rgb(22, 18, 199);
+            padding: 10px;
+            text-align: center;
+        }
+
+        .block{
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #defcf9;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .color_span{
+            color: red;
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+    <!-- для семантики html есть варианты блока div. Это <header>, <nav>, <article> (одинаковые блоки, оборачиваются в <section> ), <footer>, <aside> (для боковых меню). Это все блоки <div> только другое написания для наглядного структуирования сайта-->
+
+
+
+    <header id="header1" class="header">
+        <h1>Site</h1>
+    </header>  <!-- и тд-->
+    <!--
+    <div id="header1" class="header">
+        <h1>Site</h1>
+    </div>
+    -->
+
+    <div id="navig1" class="nav">
+        <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+        </ul>
+    </div>
+
+    <div id="block1" class="block header"> <!-- имя классов могут быть одинаковыми. могут быть несколько имен => применится несколько стилей, причем свойства применятся по порядку, как они записаны в заголовочном блоке в разделе <style>, тоесть сначала применится header, а потом block (и перебьет такие параметры как background-color и padding) -->
+        <h3>Block 1</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod quae voluptate consequatur nisi. Necessitatibus quod nihil fuga illo dolorem ab corrupti animi non delectus expedita beatae facilis veniam fugit, <span class="color_span">dolorum laborum. Accusantium modi ad deleniti </span>minus vero. Expedita, labore.</p>
+    </div> <!-- span (строчный элемент) позволяет применять стили к части объекта не меняя структуру. div перенес бы на новую строку кусок этого текста в отдельный блок-->
+
+    <div id="block2" class="block">
+        <h3>Block 2</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quod quae voluptate consequatur nisi. Necessitatibus quod nihil fuga illo dolorem ab corrupti animi non delectus expedita beatae facilis veniam fugit, dolorum laborum. Accusantium modi ad deleniti minus vero. Expedita, labore.</p>
+    </div>
+    
+    <hr>
+
+    <div>
+        <!-- для быстрого создания div, span и др. применяется div. или span. создастся сразу объект с class. Если div# - то с id -->
+    </div>
+</body>
+</html>
